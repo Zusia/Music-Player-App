@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity"
+    android:orientation="vertical"
+    android:background="@color/teal_200"
+    android:weightSum="8.5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <com.cunoraz.gifview.library.GifView
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:id="@+id/gifView"
+            custom:gif="@drawable/tenor"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+        </com.cunoraz.gifview.library.GifView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SongName"
+            android:layout_margin="20dp"
+            android:paddingTop="20dp"
+            android:padding="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="hellow"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:textStyle="italic">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:src="@drawable/images">
+
+            </ImageView>
+            ></LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+          <SeekBar
+              android:layout_width="210dp"
+              android:layout_height="wrap_content"
+              android:id="@+id/seekBar"
+              android:layout_centerInParent="true"
+              android:layout_alignParentBottom="true"
+              android:layout_margin="20dp"
+              android:outlineSpotShadowColor="@color/black"
+              android:layout_marginBottom="15dp"
+              >
+
+          </SeekBar>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/startTime"
+                android:textSize="20sp"
+                android:text="0:00"
+                android:textColor="@color/black"
+                android:layout_toLeftOf="@+id/seekBar"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/seekBar"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:id="@+id/endTime"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                >
+
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/PlayButton"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pause_btn"
+            >
+
+        </Button>
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/Next"
+                android:background="@drawable/next_btn"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/PlayButton">
+
+            </Button>
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/Previous"
+                android:layout_toLeftOf="@+id/PlayButton"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/previous_btn"
+                >
+
+            </Button>
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/Forward"
+                android:layout_toRightOf="@id/Next"
+                android:background="@drawable/forward_btn"
+                android:layout_marginTop="25dp">
+
+            </Button>
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/Rewind"
+                android:layout_toLeftOf="@id/Previous"
+                android:background="@drawable/rewind_btn"
+                android:layout_marginTop="25dp">
+            </Button>
+            <!--
+            <com.gauravk.audiovisualizer.visualizer.BlastVisualizer
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/wave"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                custom:avColor="@color/av_dark_blue"
+                custom:avDensity="0.4"
+                custom:avSpeed="normal"/>
+ -->
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
